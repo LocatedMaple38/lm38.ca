@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $file = fopen(filename: "submissions.txt", mode: "a+");
     fwrite(stream: $file, data: $data);
     fclose(stream: $file);
-    // header(header: "Location: https://locatedmaple38.github.io/theislidefamly.com/"); 
-    header(header: "Location: https://localhost:8000/");
+    //header(header: "Location: https://locatedmaple38.github.io/theislidefamly.com/"); 
+    //header(header: "Location: https://localhost:8000/");
 }
 ?>
