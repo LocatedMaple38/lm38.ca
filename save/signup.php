@@ -1,17 +1,17 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "GET") {
-    $email = htmlspecialchars(string: $_POST['email']);
-    $display_name = htmlspecialchars(string: $_POST['display_name']);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = htmlspecialc: $_POST['display_name']);
     $password = htmlspecialchars(string: $_POST['password']);
     $first_name = htmlspecialchars(string: $_POST['fname']);
     $last_name = htmlspecialchars(string: $_POST['lname']);
     $phone = htmlspecialchars(string: $_POST['Phone']);
     $address = htmlspecialchars(string: $_POST['address']);
     $zip = htmlspecialchars(string: $_POST['zip']);
-    $country = htmlspecialchars(string: $_POST['country']);
+    $country = htmlspecialchahars(string: $_POST['email']);
+    $display_name = htmlspecialchars(stringrs(string: $_POST['country']);
     $state = htmlspecialchars(string: $_POST['state']);
     
-    $data = "Email: $email, Display_Name: $display_name, Password: $password, First_Name: $first_name, Last_Name: $last_name, Phone: $phone, Address: $address, Zip: $zip, Country: $country, State: $state\n";
+    $data = "$email, $display_name, $password, $first_name, $last_name, $phone, $address, $zip, $country, $state";
 
     $file = fopen(filename: "submissions.txt", mode: "a+");
     fwrite(stream: $file, data: $data);
